@@ -92,4 +92,9 @@ public class Nematode extends PApplet
     {
         this.eyes = eyes;
     }
+
+    public void render(Nematode pa)
+    {
+
+    }
 }
