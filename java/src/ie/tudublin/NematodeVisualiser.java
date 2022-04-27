@@ -10,15 +10,18 @@ public class NematodeVisualiser extends PApplet
 {
 	ArrayList<Nematode> nematodes = new ArrayList<Nematode>();
 
+	int amount = nematodes.size();
+	int count;
+
 	public void keyPressed()
 	{		
 		if (keyCode == LEFT)
 		{
-			// n1 = new Nematode(name, length, limbs, gender, eyes)
-			for(int i = 0; i < nematodes.size(); i++)
+			for(int i = 0; i < amount; i++)
 			{
-				Nematode n = new Nematode;
+				Nematode n = new Nematode(row));
 				nematodes.add(n);
+				noStroke();
 			}
 		}		
 	}

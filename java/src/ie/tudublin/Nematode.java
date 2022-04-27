@@ -105,10 +105,28 @@ public class Nematode extends PApplet
 		pa.line(670, 370, 700, 400);
 		pa.line(670, 430, 700, 400);
 
+        int counter = 30;
+
         for (int i = 0; i < length;  i++)
         {
-            pa.ellipse(400, 200, 400, 300);
+            pa.circle(250, 250, PApplet.BOTTOM + counter);
+            counter = counter + 30;
+
         }
+
+        // for (int i = 0; i < 13; i++)
+        // {
+        //     if (gender == "n")
+        //     {
+        //         pa.stroke(255);
+        //         pa.fill(255, 255, 0);
+        //         pa.line(PApplet.CENTER, 700, PApplet.CENTER, 730);
+        //     }
+        //     else if (gender == "f")
+        //     {
+        //         pa.ellipse(PApplet.CENTER, PApplet.BOTTOM, PApplet.CENTER, height - 50;);
+        //     }
+        // }
 
         pa.fill(255);
         pa.textSize(16);
