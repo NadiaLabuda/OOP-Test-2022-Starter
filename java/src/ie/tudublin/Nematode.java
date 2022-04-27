@@ -93,8 +93,26 @@ public class Nematode extends PApplet
         this.eyes = eyes;
     }
 
-    public void render(Nematode pa)
+    public void render(NematodeVisualiser pa)
     {
+        pa.stroke(255);
+		pa.fill(255, 255, 0);
+		pa.line(100, 400, 200, 400);
+		pa.line(100, 400, 130, 370);
+		pa.line(100, 400, 130, 430);
 
+		pa.line(600, 400, 700, 400);
+		pa.line(670, 370, 700, 400);
+		pa.line(670, 430, 700, 400);
+
+        for (int i = 0; i < length;  i++)
+        {
+            pa.ellipse(400, 200, 400, 300);
+        }
+
+        pa.fill(255);
+        pa.textSize(16);
+        pa.textAlign(PApplet.TOP, PApplet.CENTER);
+        pa.text(name, 200, 200);
     }
 }

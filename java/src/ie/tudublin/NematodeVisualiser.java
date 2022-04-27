@@ -14,6 +14,12 @@ public class NematodeVisualiser extends PApplet
 	{		
 		if (keyCode == LEFT)
 		{
+			// n1 = new Nematode(name, length, limbs, gender, eyes)
+			for(int i = 0; i < nematodes.size(); i++)
+			{
+				Nematode n = new Nematode;
+				nematodes.add(n);
+			}
 		}		
 	}
 
@@ -28,7 +34,6 @@ public class NematodeVisualiser extends PApplet
 		colorMode(HSB);
 		background(0);
 		smooth();
-		drawArrows();
 		loadNematodes();
 		printNematodes();	
 	}
@@ -55,26 +60,12 @@ public class NematodeVisualiser extends PApplet
 
 	public void drawNematodes()
 	{
+		noFill();
 		for(Nematode n:nematodes)
 		{
 			n.render(this);
 		}
 	}
-
-	public void drawArrows()
-	{
-		stroke(255);
-		fill(255, 255, 0);
-		line(100, 400, 200, 400);
-		line(100, 400, 130, 370);
-		line(100, 400, 130, 430);
-
-
-		line(600, 400, 700, 400);
-		line(670, 370, 700, 400);
-		line(670, 430, 700, 400);
-	}
-
 
 	public void draw()
 	{
