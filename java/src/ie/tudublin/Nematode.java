@@ -14,6 +14,35 @@ public class Nematode extends PApplet
     private String gender;
     private int eyes;
 
+    @Override
+    public String toString()
+    {
+      return name
+        + "," + length
+        + "," + limbs
+        + "," + gender
+        + "," + eyes
+        ;
+    }
+
+    public Nematode(TableRow row)
+    {
+        name = row.getString("name");
+        length = row.getInt("length");
+        limbs = row.getInt("limbs");
+        gender = row.getString("gender");
+        eyes = row.getInt("eyes");
+    }
+
+    public Nematode(String name, int length, int limbs, String gender, int eyes)
+    {
+        this.name = name;
+        this.length = length;
+        this.limbs = limbs;
+        this.gender = gender;
+        this.eyes = eyes;
+    }
+
     public String getName()
     {
         return name;
@@ -61,15 +90,6 @@ public class Nematode extends PApplet
 
     public void setEyes(int eyes)
     {
-        this.eyes = eyes;
-    }
-
-    public Nematode(String name, int length, int limbs, String gender, int eyes)
-    {
-        this.name = name;
-        this.length = length;
-        this.limbs = limbs;
-        this.gender = gender;
         this.eyes = eyes;
     }
 }
